@@ -1,6 +1,6 @@
 # Challenge ONE Java da [Alura](https://www.alura.com.br/)
 ## Desafio:
-- Criar uma aplicação Desktop com conexão ao Banco de Dados
+- Criar uma aplicação para Desktop com conexão ao Banco de Dados
 ## Requisitos do desafio:
 1. Sistema de autenticação de usuários para que somente usuários pertencentes ao hotel possam acessar o sistema
 2. Permitir criar, editar e excluir uma reserva para clientes
@@ -40,12 +40,12 @@ CREATE TABLE prices(id VARCHAR(50) NOT NULL, price DECIMAL(10, 2) NOT NULL, PRIM
 ```sql
 INSERT INTO prices(id, price) VALUES('day', 349.90);
 ```
-- Criando a Table das reservas
+- Criando a Tabela das reservas
 ```sql
 CREATE TABLE reservations(id BIGINT NOT NULL AUTO_INCREMENT, check_in DATE, check_out DATE, price DECIMAL(10, 2), pay_method VARCHAR(50),
 	PRIMARY KEY(id)) ENGINE InnoDB;
 ```
-- Criando a Table dos Hóspedes
+- Criando a Tabela dos Hóspedes
 ```sql
 CREATE TABLE guests(id BIGINT NOT NULL AUTO_INCREMENT, first_name VARCHAR(50), last_name VARCHAR(50), birth_date DATE,
 	country VARCHAR(50), phone VARCHAR(50), reserve_id BIGINT,
