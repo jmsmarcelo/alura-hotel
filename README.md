@@ -51,7 +51,7 @@ CREATE TABLE reservations(id BIGINT NOT NULL AUTO_INCREMENT,
 	check_in DATE, check_out DATE, price DECIMAL(10, 2), pay_method VARCHAR(50),
 	PRIMARY KEY(id)) ENGINE InnoDB;
 ```
-- Criando a Tabela dos Hóspedes
+- Criando a Tabela de Hóspedes
 ```sql
 CREATE TABLE guests(id BIGINT NOT NULL AUTO_INCREMENT, first_name VARCHAR(50), last_name VARCHAR(50),
 	birth_date DATE, country VARCHAR(50), phone VARCHAR(50), reserve_id BIGINT,
