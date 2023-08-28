@@ -15,11 +15,7 @@ public class Guest {
 	
 	public Guest(String firstName, String lastName,
 			Date birthDate, String country, String phone, long reserveId) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.birthDate = birthDate;
-		this.country = country;
-		this.phone = phone;
+		this.update(firstName, lastName, birthDate, country, phone);
 		this.reserveId = reserveId;
 	}
 	public void update(String firstName, String lastName,
