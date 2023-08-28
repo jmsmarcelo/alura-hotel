@@ -2,7 +2,7 @@
 ## Challenge ONE Java [Alura](https://www.alura.com.br/)
 ## Desafio:
 - Criar uma aplicação para Desktop com conexão ao Banco de Dados
-## Requisitos do desafio:
+### Requisitos do desafio:
 1. Sistema de autenticação de usuários para que somente usuários pertencentes ao hotel possam acessar o sistema
 2. Permitir criar, editar e excluir uma reserva para clientes
 3. Pesquisar na base de dados toda a informação de clientes e reservas
