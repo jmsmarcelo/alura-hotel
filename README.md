@@ -1,4 +1,5 @@
-# Challenge ONE Java da [Alura](https://www.alura.com.br/)
+# Hotel Alura
+## Challenge ONE Java da [Alura](https://www.alura.com.br/)
 ## Desafio:
 - Criar uma aplicação para Desktop com conexão ao Banco de Dados
 ## Requisitos do desafio:
