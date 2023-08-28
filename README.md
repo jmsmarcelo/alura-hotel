@@ -45,7 +45,7 @@ CREATE TABLE prices(id VARCHAR(50) NOT NULL,
 ```sql
 INSERT INTO prices(id, price) VALUES('day', 349.90);
 ```
-- Criando a Tabela das reservas
+- Criando a Tabela de reservas
 ```sql
 CREATE TABLE reservations(id BIGINT NOT NULL AUTO_INCREMENT,
 	check_in DATE, check_out DATE, price DECIMAL(10, 2), pay_method VARCHAR(50),
