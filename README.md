@@ -16,7 +16,7 @@
 - Eclipse
 - MySQL
 
-# 🖥️ Requisitos para utilizar a aplicação:
+# 🖥️ Requisitos para utilizar o aplicativo:
 
 - Java
 - MySQL Server (rodando na porta 3306)
