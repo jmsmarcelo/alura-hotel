@@ -26,7 +26,7 @@
 
 ## 💾 Download do aplicativo: \>>[Hotel Alura](https://github.com/jmsmarcelo/alura-hotel/releases/latest)<<
 
-## ⚙️ Configurando o Banco de Dados:
+## ⚙️ Configurando o MySQL:
 
 - Criando o Banco de Dados (O nome deve ser **alura_hotel**)
 ```sql
