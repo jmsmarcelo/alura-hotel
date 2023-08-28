@@ -60,8 +60,11 @@ CREATE TABLE guests(id BIGINT NOT NULL AUTO_INCREMENT, first_name VARCHAR(50), l
 	PRIMARY KEY(id), FOREIGN KEY(reserve_id) REFERENCES reservations(id)) ENGINE InnoDB;
 ```
 
+![alura-hotel-preview](https://github.com/jmsmarcelo/alura-hotel/assets/32857346/65a1cc8d-e68a-4507-b6a2-dae72292c59a)
+
 https://github.com/jmsmarcelo/alura-hotel/assets/32857346/51cc0e3a-6cc7-4af1-b2eb-8314b0b0f933
 
+![badge](https://github.com/jmsmarcelo/alura-hotel/assets/32857346/e749d6de-34da-43dd-8962-7ac4596c5587)
 
 
 
