@@ -20,6 +20,9 @@
 - Java
 - MySQL Server (rodando na porta 3306)
 
+## 🔐 Usuário e senha:
+- Os mesmos utilizados no Banco de Dados (que foram inseridos na instalação do MySQL)
+
 ## ⚙️ Configurando o Banco de Dados:
 
 - Criando o Banco de Dados (O nome deve ser **alura_hotel**)
