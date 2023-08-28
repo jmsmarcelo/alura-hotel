@@ -310,7 +310,9 @@ public class MenuSearch extends JFrame {
 		btnDelete.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				int target = tbGuests.getSelectedRow();
+				int target = -1;
+				if(tabPanel.getSelectedIndex() == 1)
+					target = tbGuests.getSelectedRow();
 				if(target == -1)
 					target = tbReservations.getSelectedRow();
 				if(target != -1) {
