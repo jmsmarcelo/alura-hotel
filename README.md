@@ -24,6 +24,8 @@
 ## 🔐 Usuário e senha:
 - Os mesmos utilizados no Banco de Dados (que foram inseridos na instalação do MySQL)
 
+## 💾 Download do aplicativo: \>>[Hotel Alura](https://github.com/jmsmarcelo/alura-hotel/releases/latest)<<
+
 ## ⚙️ Configurando o Banco de Dados:
 
 - Criando o Banco de Dados (O nome deve ser **alura_hotel**)
