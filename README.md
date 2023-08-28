@@ -37,7 +37,8 @@ USE alura_hotel;
 - Criando a Tabela de preços da diária
 
 ```sql
-CREATE TABLE prices(id VARCHAR(50) NOT NULL, price DECIMAL(10, 2) NOT NULL, PRIMARY KEY(id)) ENGINE InnoDB;
+CREATE TABLE prices(id VARCHAR(50) NOT NULL,
+	price DECIMAL(10, 2) NOT NULL, PRIMARY KEY(id)) ENGINE InnoDB;
 ```
 - Inserindo o valor da diária (Pode ser o valor que desejar)
 ```sql
@@ -45,13 +46,14 @@ INSERT INTO prices(id, price) VALUES('day', 349.90);
 ```
 - Criando a Tabela das reservas
 ```sql
-CREATE TABLE reservations(id BIGINT NOT NULL AUTO_INCREMENT, check_in DATE, check_out DATE, price DECIMAL(10, 2), pay_method VARCHAR(50),
+CREATE TABLE reservations(id BIGINT NOT NULL AUTO_INCREMENT,
+	check_in DATE, check_out DATE, price DECIMAL(10, 2), pay_method VARCHAR(50),
 	PRIMARY KEY(id)) ENGINE InnoDB;
 ```
 - Criando a Tabela dos Hóspedes
 ```sql
-CREATE TABLE guests(id BIGINT NOT NULL AUTO_INCREMENT, first_name VARCHAR(50), last_name VARCHAR(50), birth_date DATE,
-	country VARCHAR(50), phone VARCHAR(50), reserve_id BIGINT,
-    PRIMARY KEY(id), FOREIGN KEY(reserve_id) REFERENCES reservations(id)) ENGINE InnoDB;
+CREATE TABLE guests(id BIGINT NOT NULL AUTO_INCREMENT, first_name VARCHAR(50), last_name VARCHAR(50),
+	birth_date DATE, country VARCHAR(50), phone VARCHAR(50), reserve_id BIGINT,
+	PRIMARY KEY(id), FOREIGN KEY(reserve_id) REFERENCES reservations(id)) ENGINE InnoDB;
 ```
 
