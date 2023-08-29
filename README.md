@@ -19,7 +19,7 @@
 # 🖥️ Requisitos para utilizar o aplicativo:
 
 - Java
-- MySQL Server (no localhost:3306)
+- MySQL Server (no **localhost:3306**)
 
 ## 🔐 Usuário e senha:
 - Os mesmos utilizados no Banco de Dados (que foram inseridos na instalação do MySQL)
