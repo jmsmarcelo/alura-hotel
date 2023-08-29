@@ -38,14 +38,16 @@ public class DAO {
 	public void update(Guest guest) throws SQLException {
 		try(PreparedStatement ps = conn.prepareStatement(
 				"UPDATE guests SET first_name = ?, last_name = ?, birth_date = ?, country = ?,"
-				+ " phone = ? WHERE id = " + guest.getId())) {
+				+ " phone = ? WHERE id = ?")) {
+			ps.setLong(6, guest.getId());
 			setPs(ps, guest);
 		}
 	}
 	public void update(Reserve reserve, long reserveId) throws SQLException {
 		try(PreparedStatement ps = conn.prepareStatement(
 				"UPDATE reservations SET check_in = ?, check_out = ?, price = ?, pay_method = ?"
-				+ " WHERE id = " + reserveId)) {
+				+ " WHERE id = ?")) {
+			ps.setLong(5, reserveId);
 			setPs(ps, reserve);
 		}
 	}
@@ -70,9 +72,11 @@ public class DAO {
 		List<Guest> guests = new ArrayList<Guest>();
 		String sql = "SELECT * FROM guests"
 						+ " INNER JOIN reservations ON guests.reserve_id = reservations.id"
-						+ " WHERE first_name REGEXP '" + match
-						+ ".*' OR last_name REGEXP '" + match + ".*'";
+						+ " WHERE first_name REGEXP ?"
+						+ " OR last_name REGEXP ?";
 		try(PreparedStatement ps = conn.prepareStatement(sql)) {
+			ps.setString(1, match + ".*");
+			ps.setString(2, match + ".*");
 			ps.execute();
 			try(ResultSet rs = ps.getResultSet()) {
 				while(rs.next()) {

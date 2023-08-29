@@ -9,6 +9,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.math.BigDecimal;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -363,14 +364,16 @@ public class MenuSearch extends JFrame {
 					guests.get(i).getLastName(),
 					guests.get(i).getBirthDate().toString(),
 					guests.get(i).getCountry(),
-					guests.get(i).getPhone().replaceAll("((\\d{2})(\\d)(\\d{4})(\\d{4}))$", "$2 $3 $4-$5"),
+					guests.get(i).getPhone()
+						.replaceAll("(\\d{2})(\\d)(\\d{4})(\\d{4})$", "$1 $2 $3-$4"),
 					String.valueOf(guests.get(i).getReserveId())
 			});
 			tbReservationsModel.addRow(new Object[] {
 					reservations.get(i).getId(),
 					reservations.get(i).getCheckIn(),
 					reservations.get(i).getCheckOut(),
-					"R$   " + reservations.get(i).getPrice(),
+					new DecimalFormat("R$  ###,###,###.00")
+						.format(reservations.get(i).getPrice()),
 					reservations.get(i).getPayMethod()
 			});
 		}

@@ -219,16 +219,15 @@ public class MenuGuestRecord extends JFrame {
 		
 		List<String> countries = new ArrayList<String>();
 		for(Locale l: Locale.getAvailableLocales())
-			if(l.getCountry() != "")
-			countries.add(l.getDisplayCountry());
+			if(!l.getCountry().isBlank())
+				countries.add(l.getDisplayCountry());
 
 		JComboBox<String> txtCountries = new JComboBox<String>();
 		txtCountries.setBounds(560, 350, 289, 36);
 		txtCountries.setBackground(SystemColor.text);
 		txtCountries.setFont(new Font("Roboto", Font.PLAIN, 16));
 		txtCountries.setModel(new DefaultComboBoxModel<String>(
-				countries.toArray(new String[0])
-		));
+				countries.toArray(new String[0])));
 		txtCountries.setSelectedItem(Locale.getDefault().getDisplayCountry());
 		contentPanel.add(txtCountries);
 		
